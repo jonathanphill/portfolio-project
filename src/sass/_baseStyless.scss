@@ -1,14 +1,61 @@
-html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+:root{
+    --ff-primary:'Montserrat',
+        sans-serif;
+    --ff-name:'Water Brush',
+        cursive;
+    --fw-reg:400;
+    --fw-semi-bold:500;
+    --fw-bold:600;
+    --clr-light:#ddd2d2;
+    --clr-custom:rgb(255, 179, 155);
+    --clr-accent:#16e0bd;
+    --clr-lynn:#14303f;
+    --clr-dark:#4a4646;
 
-html { box-sizing: border-box;}
+    --fs-h1:3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3:1.25rem;
+    --fs-body:1rem;
 
-*, *:before, *:after {box-sizing: inherit}
+    --bs: .25em .25em .75em rgba(0,0,0,.25),
+        .125em, .125em, .25em rgba(0,0,0,.15);
 
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+}
+:focus{
+    outline:3px solid var(--clr-accent) ;
+    outline-offset: 3px;
+}
+
+
+// buttons
+.btn{
+    display: inline-block;
+    padding: .5em 2.5em;
+    background-color: var(--clr-custom);
+    color: var(--clr-lynn);
+    font-weight: var(--fw-bold);
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    transition: transform 200ms ease-in-out;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+}
+@media (min-width:800px) {
+    :root{
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+    
+}
 
 // ****************Base Styles*********************************
 @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 html {
     font-size: 125%;
@@ -22,6 +69,7 @@ html {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 ul {
@@ -34,21 +82,22 @@ ul {
 a {
     text-decoration: none;
     font-size: 1rem;
-    color: rgb(255, 179, 155);
+    color:var(--clr-custom);
 }
 // ****************Base Styles*********************************
 
 
 body {
+    background-color:var(--clr-lynn);
+    color:var(--clr-custom);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size:var(--fs-body);
     min-height: 100vh;
     width: 100%;
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    font-weight:400;
-    line-height: 1.4;
-    color: rgb(255, 179, 155);
-    background-color: rgb(20, 48, 63);
+    font-weight:var(--fw-reg);
+    line-height: 1.6;
 
 }
 
@@ -57,6 +106,36 @@ header,
 .myWork {
     min-height: 300px;
 }
+h1,
+h2,
+h3{
+    line-height: 1.1;
+    margin: 0;
+}
+h1{font-size: var(--fs-h1);}
+h2{font-size: var(--fs-h2);}
+h3{font-size: var(--fs-h3);}
 
+section{
+ padding: 5em 2em;   
+}
 
+.section__title{
+    margin-bottom: .25em;
+}
 
+.section__subtitle{
+    margin:0;
+    font-size: var(--fs-h3);
+}
+.section__subtitle--intro,
+.section__subtitle--about{
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    color:black;
+    margin-bottom:1em ;
+    
+}
+.section__title--intro span{
+    display: block;
+}

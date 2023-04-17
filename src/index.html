@@ -10,46 +10,95 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <!-- I can put my own svg in this  -->
+        <!-- <div class="logo">
+            I can put my own svg in this 
             <img src="./assets/nicolas-horn-MTZTGvDsHFY-unsplash.png" alt="">
-        </div>
+        </div> -->
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hambuger"></span>
         </button>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">My Projects</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">About Me</a></li>
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#myServices" class="nav__link">My Projects</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">My ToolKit</a></li>
                
             </ul>
         </nav>
-        <h1>Hi I'm <span class="name">Jonathan</span></h1>
-        <p>
-            based in Toronto
-        </p>
     </header>
-    <main>
-        <section class="aboutMe">
-            <h2>About Me</h2>
-        </section>
-        <section class="myWork">
-            <h2>My Work</h2>
-            <ul>
-                <li><a href="https://hangrytummy.netlify.app" target="_blank">Hangry Tummy</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <div>
-            <p>phone</p>
-            <p>email</p>
+    <!-- Intorduction -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">Hi I am <span class="name">Jonathan</span></h1>
+        <p class="section__subtitle section__subtitle--intro">front-end developer</p>
+        <img src="./assets/fotor_2023-4-15_23_9_52.jpg" alt="" class="intro__img">
+    </section>
+
+    <!-- My services -->
+    <section class="my__services" id="myServices">
+        <h2 class="section__title section__title-services">What I do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Design + Dev</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus ipsam animi expedita, adipisci perferendis impedit ad a eligendi corporis itaque similique voluptatum numquam tenetur porro officiis? Nobis nisi alias commodi!</p>
+               
+            </div><!--close service  -->
+            <div class="service">
+                <h3>PSD Design Conversion</h3>
+                <p>I can take designs and convert them into fully funtional, responsive websites on any device, while also providing an intutive user interface and interactive features.</p>
+               
+            </div><!--close /service  -->
+            <div class="service">
+                <h3>API calls</h3>
+                <p>With this powerful skill set, I can access data from a variety of sources and integrate into your website, creating dynamic and interactive experiences for your users.</p>
+               
+            </div><!--close service  -->
+        </div><!--close /SERVICES  -->
+        <a href="#work" class="btn">My Work</a>
+    </section>
+    
+    <!-- About Me -->
+    <section class="about__me" id="about">
+        <h2 class="section__title section__title--about">About Me</h2>
+        <p class="section__subtitle section__subtitle--about">Front-End developer based out of YYZ</p>
+        <div class="about__me__body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque minus alias eius!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, iste hic! Qui magnam.</p>
         </div>
-        <form action="#">
-            
-        </form>
+
+        <img src="./assets/IMG-3002.jpg" alt="" class="aboutMeImg">
+    </section>
+
+    <!-- My Work -->
+    <section class="my__work" id="work">
+        <h2 class="section__title section__title--work">My Work</h2>
+        <p class="section__subtitle section__subtitle--work"></p>
+    </section>
+    <div class="portfolio">
+        <!-- Portfolio Item 01 -->
+        <a href="#" class="portfolio__item">
+            <img src="./assets/hangry_tummy.jpg" alt="">
+        </a>
+        <!-- Portfolio Item 02 -->
+        <a href="#" class="portfolio__item">
+            <img src="./assets/hangry_tummy.jpg" alt="">
+        </a>
+        <!-- Portfolio Item 03 -->
+        <a href="#" class="portfolio__item">
+            <img src="./assets/hangry_tummy.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <a href="mailto:hello@jane.dev" class="footer__link"> hello@jane.dev</a>
+        <ul class= "social__list">
+            <li class="social__list"><a href="" class="social__list__link">a</a></li>
+            <li class="social__list"><a href="" class="social__list__link">b</a></li>
+            <li class="social__list"><a href="" class="social__list__link">c</a></li>
+            <li class="social__list"><a href="" class="social__list__link">d</a></li>
+
+        </ul>
     </footer>
     
     
