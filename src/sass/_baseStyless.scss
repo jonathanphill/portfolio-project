@@ -46,9 +46,9 @@
 @media (min-width:800px) {
     :root{
         --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
+        // --fs-h2: 3.75rem;
+        // --fs-h3: 1.5rem;
+        // --fs-body: 1.125rem;
     }
     
 }
@@ -59,6 +59,7 @@
 
 html {
     font-size: 125%;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -100,8 +101,6 @@ body {
     line-height: 1.6;
 
 }
-
-header,
 .aboutMe,
 .myWork {
     min-height: 300px;
